@@ -34,6 +34,12 @@ jobs:
         with:
           name: java-jar
 
+      - name: debug
+        run: ls -lah .
+
+      - name: debug2
+        run: ls -lah target/
+
       - uses: actions/checkout@v3
       - name: Build the Docker image
         run: docker build . --file k8s/docker/Dockerfile --tag trainingsground_actions:$(date +%s)
