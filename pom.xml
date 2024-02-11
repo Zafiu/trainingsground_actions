@@ -37,7 +37,7 @@
 
 
     <build>
-        <finalName>trainingsground_actions_${project.version}</finalName>
+        <finalName>trainingsground_actions</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
