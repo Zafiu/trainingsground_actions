@@ -20,7 +20,7 @@ jobs:
 
       - name: Build with Maven
         run: mvn clean package -DskipTests=false
-        
+
       - uses: actions/upload-artifact@master
         with:
           name: java-jar
@@ -33,7 +33,6 @@ jobs:
       - uses: actions/download-artifact@master
         with:
           name: java-jar
-          path: target/
 
       - uses: actions/checkout@v3
       - name: Build the Docker image
