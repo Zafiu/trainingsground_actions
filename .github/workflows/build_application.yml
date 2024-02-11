@@ -43,6 +43,8 @@ jobs:
         run: ls -lah target/
 
       - uses: actions/checkout@v3
+      - name: debug3
+        run: ls -lah target/
       - name: Build the Docker image
         run: docker build . --file k8s/docker/Dockerfile --tag trainingsground_actions:$(date +%s)
   
