@@ -31,11 +31,13 @@ jobs:
     needs: [build]
     steps:
       - uses: actions/checkout@v3
+
       - name: Download jar files
         uses: actions/download-artifact@master
         with:
           name: java-jar
           path: target/
+          
       - name: Build the Docker image
         run:  docker build . --file k8s/docker/Dockerfile --tag trainingsground_actions:$(date +%s)
   
