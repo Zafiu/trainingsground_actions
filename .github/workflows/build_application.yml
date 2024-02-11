@@ -36,7 +36,5 @@ jobs:
         with:
           name: java-jar
           path: target/
-        run: | 
-          ls -lah &&
-          docker build . --file k8s/docker/Dockerfile --tag trainingsground_actions:$(date +%s)
+        run:  docker build . --file k8s/docker/Dockerfile --tag trainingsground_actions:$(date +%s)
   
